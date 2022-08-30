@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use App\Http\Requests\StorePostPost;
 
 class PostController extends Controller
 {
@@ -15,7 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        echo("JOSUE ENRIQUE LOPEZ VASQUEZ");
+       // echo("JOSUE ENRIQUE LOPEZ VASQUEZ");
         //
     }
 
@@ -26,7 +27,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        //echo("HOLA MUNDO");
+        //echo("Josue Lopez");
+        echo view ('dashboard.post.create');
     
     }
 
@@ -36,9 +38,10 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePostPost $request)
     {
-        //
+         echo "El titulo es: ".$request->title;
+         Post::create($request->validated());
     }
 
     /**
