@@ -16,8 +16,8 @@ class PostController extends Controller
      */
     public function index()
     {
-       // echo("JOSUE ENRIQUE LOPEZ VASQUEZ");
-        //
+       echo("JOSUE ENRIQUE LOPEZ VASQUEZ");
+        
     }
 
     /**
